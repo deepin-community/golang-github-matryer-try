@@ -1,0 +1,28 @@
+golang-github-matryer-try (1+git20161228.6.9ac251b-2.1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>  Wed, 25 May 2022 10:55:40 +0800
+
+golang-github-matryer-try (1+git20161228.6.9ac251b-2.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 08 Jan 2021 14:59:35 +0100
+
+golang-github-matryer-try (1+git20161228.6.9ac251b-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" and bump Standards-Version to 4.1.4
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Apr 2018 09:13:03 -0600
+
+golang-github-matryer-try (1+git20161228.6.9ac251b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #870589)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 02 Aug 2017 23:56:38 -0600

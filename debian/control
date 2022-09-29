@@ -1,0 +1,27 @@
+Source: golang-github-matryer-try
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any,
+               golang-github-cheekybits-is-dev
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-matryer-try
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-matryer-try.git
+Homepage: https://github.com/matryer/try
+XS-Go-Import-Path: github.com/matryer/try
+
+Package: golang-github-matryer-try-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-github-cheekybits-is-dev
+Description: Simple idiomatic retry package for Go
+ Idiomatic Go retry package.
+ Thanks to @rowland (https://github.com/rowland) for code review.
+ .
+ Usage: Just call try.Do with the function you want to retry
+ in the event of an error.
