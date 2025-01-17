@@ -1,8 +1,31 @@
-golang-github-matryer-try (1+git20161228.6.9ac251b-2.1) UNRELEASED; urgency=medium
+golang-github-matryer-try (1+git20161228.6.9ac251b-4) unstable; urgency=medium
 
-  * update
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.1.5, no changes needed.
 
- -- Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>  Wed, 25 May 2022 10:55:40 +0800
+  [ Anthony Fok ]
+  * Reorder fields in debian/control and debian/copyright
+    as would be generated in the next dh-make-golang release after 0.6.0-1
+  * Change Section from devel to golang
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * debian/rules: Run dh with --builddirectory=_build
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Bump Standards-Version to 4.6.0 (no change)
+  * Mark library package with "Multi-Arch: foreign"
+
+ -- Anthony Fok <foka@debian.org>  Wed, 06 Apr 2022 06:16:26 -0600
+
+golang-github-matryer-try (1+git20161228.6.9ac251b-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add Ubuntu patch to fix FTBFS with Go 1.18 (Closes: #1007789).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Apr 2022 12:07:01 +0200
 
 golang-github-matryer-try (1+git20161228.6.9ac251b-2.1) unstable; urgency=medium
 

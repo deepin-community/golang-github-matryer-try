@@ -1,14 +1,15 @@
 Source: golang-github-matryer-try
-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
-Uploaders: Anthony Fok <foka@debian.org>
-Section: devel
-Testsuite: autopkgtest-pkg-go
+Section: golang
 Priority: optional
-Build-Depends: debhelper (>= 10),
-               dh-golang,
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
                golang-any,
                golang-github-cheekybits-is-dev
-Standards-Version: 4.1.4
+Testsuite: autopkgtest-pkg-go
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-matryer-try
 Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-matryer-try.git
 Homepage: https://github.com/matryer/try
@@ -16,6 +17,7 @@ XS-Go-Import-Path: github.com/matryer/try
 
 Package: golang-github-matryer-try-dev
 Architecture: all
+Multi-Arch: foreign
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          golang-github-cheekybits-is-dev

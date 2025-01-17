@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: try
 Source: https://github.com/matryer/try
+Upstream-Name: try
 
 Files: *
 Copyright: 2015 Mat Ryer <thatmatryer@gmail.com>
