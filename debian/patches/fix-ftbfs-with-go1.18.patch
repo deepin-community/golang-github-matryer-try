@@ -1,0 +1,42 @@
+Description: Fix FTBFS with Go 1.18
+ Go 1.18 is more strict about unused variables. This patch
+ removes some unused variables to enable building this
+ package against Go 1.18
+Author: William 'jawn-smith' Wilson <jawn-smith@ubuntu.com>
+Forwarded: https://github.com/matryer/try/pull/7
+Last-Update: 2022-03-16
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: golang-github-matryer-try-1+git20161228.6.9ac251b/try_test.go
+===================================================================
+--- golang-github-matryer-try-1+git20161228.6.9ac251b.orig/try_test.go
++++ golang-github-matryer-try-1+git20161228.6.9ac251b/try_test.go
+@@ -15,10 +15,9 @@
+ 	SomeFunction := func() (string, error) {
+ 		return "", nil
+ 	}
+-	var value string
+ 	err := try.Do(func(attempt int) (bool, error) {
+ 		var err error
+-		value, err = SomeFunction()
++		_, err = SomeFunction()
+ 		return attempt < 5, err // try 5 times
+ 	})
+ 	if err != nil {
+@@ -30,7 +29,6 @@
+ 	SomeFunction := func() (string, error) {
+ 		panic("something went badly wrong")
+ 	}
+-	var value string
+ 	err := try.Do(func(attempt int) (retry bool, err error) {
+ 		retry = attempt < 5 // try 5 times
+ 		defer func() {
+@@ -38,7 +36,7 @@
+ 				err = errors.New(fmt.Sprintf("panic: %v", r))
+ 			}
+ 		}()
+-		value, err = SomeFunction()
++		_, err = SomeFunction()
+ 		return
+ 	})
+ 	if err != nil {
